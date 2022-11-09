@@ -1,0 +1,512 @@
+html,
+body {
+    height: 100%
+}
+
+.bg_heart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('./../img/mylove.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heart {
+    position: absolute;
+    top: -50%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.heart:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.heart:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@-moz-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@-ms-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montez);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,400,700,800);
+.container {
+    width: 100%
+}
+
+.column {
+    padding: .5rem 1rem;
+    font-size: inherit
+}
+
+@media (min-width:50rem) {
+    .container {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%
+    }
+    .column {
+        float: left
+    }
+    .clearfix:after,
+    .clearfix:before {
+        content: " ";
+        display: table
+    }
+    .clearfix:after {
+        clear: both
+    }
+    .clearfix {
+        *zoom: 1
+    }
+    body,
+    html {
+        height: 100%;
+        width: 100%
+    }
+    a {
+        text-decoration: none;
+        color: inherit
+    }
+    html {
+        font-size: 100%
+    }
+    .fullpage {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%
+    }
+    .quote-block {
+        color: #fff;
+        padding-top: 25%;
+        font-size: 200%;
+        text-shadow: 0 1px 20px rgba(0, 0, 0, .4)
+    }
+    .quote-block span {
+        display: block;
+        line-height: .85em
+    }
+    .quote-block span.a,
+    .quote-block span.c {
+        font-family: 'Alegreya Sans SC', sans-serif
+    }
+    .quote-block span.b,
+    .quote-block span.d {
+        font-family: Montez, cursive;
+        letter-spacing: .04em
+    }
+    #section1 {
+        background: transparent 0 0 no-repeat fixed url('./../img/116928000_968978873618402_1396348225538380574_n\ \(1\).jpg');
+        background-repeat: initial;
+    }
+    #section2 {
+        background: transparent 0 0 no-repeat fixed url('./../img/242205176_6542731725744854_4107363624992908150_n.jpg');
+        background-repeat: initial;
+    }
+    #section3 {
+        background: transparent 0 0 no-repeat fixed url('./../img/242261463_1030498120823782_1068690484796328866_n.jpg');
+        background-repeat: initial;
+    }
+    #section4 {
+        background: transparent 0 0 no-repeat fixed url('./../img/242166810_227830125976344_72414380745148531_n.jpg');
+        background-repeat: initial;
+    }
+    #section5 {
+        background: transparent 0 0 no-repeat fixed url('./../img/242319129_407729814144701_6977286661749501485_n.jpg');
+        background-repeat: initial;
+    }
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.scrollElement {
+    position: absolute;
+    height: 6000px;
+    width: 100px;
+    top: 0;
+    z-index: 0;
+}
+
+.btn {
+    position: fixed;
+    bottom: 5%;
+    right: 0px;
+    transform: translateX(-50%);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.7em;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    transition: all .3s;
+    z-index: 11;
+}
+
+.btn_works {
+    left: 100px;
+    right: unset;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #ffffff;
+    color: #1B1734;
+}
+
+.bot {
+    animation: ChangeBGcolor var(--all-animations-duration) infinite alternate-reverse;
+    overflow: hidden;
+    animation-play-state: var(--defaultAnimationState);
+}
+
+ :root {
+    --all-animations-duration: 1.5s;
+    --bgColor: red;
+    --color: black;
+    --defaultAnimationState: running;
+}
+
+
+/* End: Defining variables */
+
+.main-quote {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    animation: h1Change var(--all-animations-duration) infinite alternate-reverse;
+    animation-play-state: var(--defaultAnimationState);
+    margin-top: 150px;
+}
+
+.heartt {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: 40px auto;
+    animation: pulse var(--all-animations-duration) infinite alternate-reverse;
+    animation-play-state: var(--defaultAnimationState);
+}
+
+.heartt:before,
+.heartt:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #ff0000;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    animation: HearttColor var(--all-animations-duration) infinite alternate-reverse;
+    animation-play-state: var(--defaultAnimationState);
+}
+
+.heartt:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+.heartt span {
+    position: relative;
+    top: 15px;
+    left: 25px;
+    z-index: 1;
+    animation: ChangeColor var(--all-animations-duration) infinite alternate-reverse;
+    animation-play-state: var(--defaultAnimationState);
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.toggle-state {
+    padding: 10px 20px;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+    border: 0;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+
+/* Start: Animation pulse to scale the heartt */
+
+@-webkit-keyframes pulse {
+    form {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+}
+
+@keyframes pulse {
+    form {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+}
+
+
+/* End: Animation pulse to scale the heartt */
+
+
+/* Start: Changing body background to be as opposite as the color */
+
+@-webkit-keyframes ChangeBGcolor {
+    from {
+        background-color: var(--color)
+    }
+    to {
+        background-color: var(--bgColor)
+    }
+}
+
+@keyframes ChangeBGcolor {
+    from {
+        background-color: var(--color)
+    }
+    to {
+        background-color: var(--bgColor)
+    }
+}
+
+
+/* End: Changing body background to be as opposite as the color */
+
+
+/* Start: Changing header color to be as opposite as the background */
+
+@-webkit-keyframes Change {
+    from {
+        color: var(--bgColor)
+    }
+    to {
+        color: var(--color)
+    }
+}
+
+@keyframes h1Change {
+    from {
+        color: var(--bgColor)
+    }
+    to {
+        color: var(--color)
+    }
+}
+
+
+/* End: Changing header color to be as opposite as the background */
+
+
+/* Start: Toggling heart background color(red, black) */
+
+@-webkit-keyframes HeartColor {
+    from {
+        background-color: var(--bgColor)
+    }
+    to {
+        background-color: var(--color)
+    }
+}
+
+@keyframes HeartColor {
+    from {
+        background-color: var(--bgColor)
+    }
+    to {
+        background-color: var(--color)
+    }
+}
+
+
+/* Start: Toggling heart background color(red, black) */
+
+
+/* Start: Changing span color to be as opposite as the background */
+
+@-webkit-keyframes ChangeColor {
+    from {
+        color: var(--color)
+    }
+    to {
+        color: var(--bgColor)
+    }
+}
+
+@keyframes ChangeColor {
+    from {
+        color: var(--color)
+    }
+    to {
+        color: var(--bgColor)
+    }
+}
+
+#backtop {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    bottom: 40px;
+    right: 20px;
+    align-items: center;
+    position: fixed;
+    cursor: pointer;
+}
+
+#backtop1{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    bottom: 40px;
+    left: 20px;
+    align-items: center;
+    position: fixed;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.containerr {
+    margin: 0 auto;
+}
+
+.inner-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 30px;
+}
+
+ul#main-menu {
+    display: flex;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+ul#main-menu a {
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #fff;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(95, 95, 95, 0.23);
+}

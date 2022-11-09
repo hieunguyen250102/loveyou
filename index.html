@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I ♥ U</title>    <link rel="stylesheet" href="./css/love.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body onload="alert('Nếu đang vào điện thoại thì vào lại bằng laptop/pc nha, 1 vài chỗ ấn nhiều mới vô được á!')">
+    <header>
+        <div class="inner-header containerr">
+            <div class="logo">
+                <a href=""><img width="100px" height="100px" src="./img/logo.gif" alt=""></a>
+            </div>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="">Trang chủ <i style="color: red;" class="fa-solid fa-heart"></i></a></li>
+                    <li>
+                        <a href="./dist/index.html">Xì lai ảnh <i style="color: red;" class="fa-solid fa-heart"></i></a>
+                    </li>
+                    <li><a href="./scrollLove1.html">love#1 <i style="color: red;" class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="./gallery.html">Collection <i style="color: red;" class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="./login.html">Love#3 <i style="color: red;" class="fa-solid fa-heart"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bg_heart">
+
+    </div>
+
+    <div class="fullpage" id="section1">
+        <div class="container">
+            <div class="clearfix">
+                <div class="quote-block">
+                    <span class="a">A happy relationship isn't always easy,</span>
+                    <span class="b">It takes a long time to get this far,</span>
+                    <span class="c">to understand eachother and</span>
+                    <span class="d">to know how much you mean to your love.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fullpage" id="section2">
+        <div class="container">
+            <div class="clearfix">
+                <div class="quote-block">
+                    <span class="a">Life with you</span>
+                    <span class="b">is more beautiful than</span>
+                    <span class="c">any sunset or situation</span>
+                    <span class="d">I've ever seen.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fullpage" id="section3">
+        <div class="container">
+            <div class="clearfix">
+                <div class="quote-block">
+                    <span class="a">Whatever happens in the future,</span>
+                    <span class="b">as long as you want me,</span>
+                    <span class="c">I'll be there and will</span>
+                    <span class="d">love you more than my life.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fullpage" id="section4">
+        <div class="container">
+            <div class="clearfix">
+                <div class="quote-block">
+                    <span class="a">Times may get darker,</span>
+                    <span class="b">but we'll make them brighter,</span>
+                    <span class="c">brighter than we can ever imagine.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fullpage" id="section5">
+        <div class="container">
+            <div class="clearfix">
+                <div class="quote-block">
+                    <span class="a">Roses are red,</span>
+                    <span class="b">Violets are blue,</span>
+                    <span class="c">aaaah fuck it,</span>
+                    <span class="d" style="color: red;">I LOVE YOU</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bot">
+        <h1 class="main-quote">You are the pulsing of my heart</h1>
+        <div class="heartt" id="heart">
+            <span>Uyn</span>
+        </div>
+        <button id="toggleState" class="toggle-state" title="double click at the first time to activate">Xì tóp / Típ tục</button>
+    </div>
+    <div id="backtop">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+    <div id="backtop1">
+        <a href="./music.html"><i class="fa-solid fa-music"></i></a>
+    </div>
+    <script src="./love.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#header-plugin").load("https://vivinantony.github.io/header-plugin/", function() {
+            $("a.back-to-link").attr("href", "http://blog.thelittletechie.com/2015/03/love-heart-animation-using-css3.html#tlt")
+        });
+
+        var love = setInterval(function() {
+            var r_num = Math.floor(Math.random() * 40) + 1;
+            var r_size = Math.floor(Math.random() * 65) + 10;
+            var r_left = Math.floor(Math.random() * 100) + 1;
+            var r_bg = Math.floor(Math.random() * 25) + 100;
+            var r_time = Math.floor(Math.random() * 5) + 5;
+
+            $('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
+
+            $('.bg_heart').append("<div class='heart' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) + ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) + "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) + "s ease'></div>");
+
+            $('.heart').each(function() {
+                var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+                var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+                if (top <= -100 || width >= 150) {
+                    $(this).detach();
+                }
+            });
+        }, 500);
+
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop()) {
+                    $('#backtop').fadeIn();
+                } else {
+                    $('#backtop').fadeOut();
+                }
+            });
+            $('#backtop').click(function() {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
+            })
+        })
+    </script>
+    <script src="./js/love.js"></script>
+</body>
+
+</html>

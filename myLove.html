@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I ♥ U</title>
+    <link rel="stylesheet" href="./css/myLove.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- <style>
+        :root {
+            --black: #000;
+            --white: #fff;
+
+            --progress-bar: rgb(59, 130, 221);
+
+            --transition: 0.3s;
+        }
+
+        #player {
+            background: var(--black);
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        #player,
+        #player video {
+            position: absolute;
+            width: 1000px;
+            height: 100%;
+        }
+
+        #player video {
+            z-index: 50;
+        }
+
+        #controls {
+            transition: var(--transition);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 100;
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(12, 12, 12, 0.6));
+            opacity: 1;
+        }
+
+        #controls #controls-bar {
+            display: flex;
+        }
+
+        #controls #left-c {
+            position: relative;
+            width: 50%;
+            display: flex;
+        }
+
+        #controls #left-c * {
+            position: relative;
+            left: 0;
+        }
+
+        #controls #right-c {
+            position: relative;
+            width: 50%;
+            display: flex;
+        }
+
+        #controls #right-c * {
+            position: absolute;
+            right: 0;
+        }
+
+        #gettime {
+            position: absolute;
+            top: -25px;
+            padding: 2.5px 5px;
+            background: var(--progress-bar);
+            font-family: 'Roboto', sans-serif;
+            font-size: 12.5px;
+            transition: var(--transition);
+            opacity: 0;
+        }
+
+        #controls button {
+            height: 50px;
+            width: 50px;
+            color: #fff;
+            border: none;
+            background: transparent;
+        }
+
+        #controls #time {
+            color: var(--white);
+            font-family: 'Roboto', sans-serif;
+            margin: auto 5px;
+        }
+
+        #controls #progress-bar {
+            margin: 0 auto;
+            height: 5px;
+            max-width: 97.5%;
+            background: transparent;
+            padding: 10px 5px;
+        }
+
+        #controls #progress-bar:hover {
+            cursor: pointer;
+        }
+
+        #controls #background-bar {
+            position: absolute;
+            background: rgba(50, 50, 50, 0.5);
+            width: 97.5%;
+            height: 5px;
+        }
+
+        #controls #current-bar {
+            background: var(--progress-bar);
+            height: 5px;
+            width: 1px;
+            position: absolute;
+            z-index: 25;
+        }
+
+        #controls #current-bar::after {
+            content: '';
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border-radius: 100px;
+            background: var(--progress-bar);
+            float: right;
+            position: relative;
+            top: -7.5px;
+            left: 10px;
+            transition: 0.3s;
+        }
+
+        #controls #buffer-bar {
+            background: rgba(255, 255, 255, 0.5);
+            height: 5px;
+            width: 1px;
+            position: absolute;
+            z-index: 5;
+        }
+
+        #controls #volume-progress-bar {
+            margin: auto 5px auto 0;
+            height: 5px;
+            background: rgba(50, 50, 50, 0.5);
+            width: 75px;
+            padding: 0 2.5px;
+        }
+
+        #controls #volume-progress-bar:hover {
+            cursor: pointer;
+        }
+
+        #controls #volume-bar {
+            background: var(--white);
+            height: 5px;
+            width: 1px;
+            position: absolute;
+            z-index: 25;
+        }
+    </style> -->
+</head>
+
+<body onload="checkLogin()">
+    <header>
+        <div class="inner-header containerr">
+            <div class="logo">
+                <a href=""><img width="100px" height="100px" src="./img/logo.gif" alt=""></a>
+            </div>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="./index.html">Trang chủ <i style="color: red;" class="fa-solid fa-heart"></i></a></li>
+                    <li>
+                        <a href="./dist/index.html">Xì lai ảnh <i style="color: red;" class="fa-solid fa-heart"></i></a>
+                    </li>
+                    <li><a href="./scrollLove1.html">love#1 <i style="color: red;" class="fa-solid fa-heart"></i></a>
+                    </li>
+                    <li><a href="./gallery.html">Collection <i style="color: red;" class="fa-solid fa-heart"></i></a>
+                    </li>
+                    <li><a href="./login.html">Love#3 <i style="color: red;" class="fa-solid fa-heart"></i></a></li>
+                </ul>
+            </nav>
+            <div id="avatar"
+                style="margin-left: 500px;display: flex;align-items: center; justify-content:space-between;">
+                <div id="container-img" style="overflow: hidden;position: relative;">
+                    <img width="50px" height="60px" src="./img/avtar.jpg" alt="">
+                </div>
+                <div>
+                    <p></p> Hello bạn
+                    Uyn <i style="color: red;" class="fa fa-heart" aria-hidden="true"></i> </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div style="margin-top: 150px;" class="bg_heart">
+        <figure class="wave">
+            <img src="./img/fam.jpg" alt="rajni"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./../img/277374688_793523068702232_8448536772650408078_n.jpg" alt="rajni"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/73def9945b5f9d01c44e.jpg" alt="rajni"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+
+        <figure class="wave">
+            <img src="./img/231886568_806183653424915_2106649352438735893_n.jpg" alt="chuck"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+
+        <figure class="wave">
+            <img src="./img/219076468_221028709908892_6784670929009841977_n.jpg" alt="chan"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+
+        <figure class="wave">
+            <img src="./img/241604955_2830195207293386_375882975399765356_n.gif" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/228349441_543374120346615_1528354157125733615_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/241605665_384404556514071_2779775854129163642_n.gif" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/225229471_4167323240011819_1474362600528704961_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/242106022_918339799035722_3414000151922115278_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/2.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/kiy.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/740789c42b0fed51b41e.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/242161019_1001148410724786_6199096635899281582_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/242400188_584395286075870_3816084888825150169_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/242223235_2894843890826227_1836529446706897671_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/242435915_401713471390439_5382282468535245699_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/242212300_407767224106890_4829695866050192424_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/242121516_1951237148382996_913521049823951250_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+        <figure class="wave">
+            <img src="./img/242212491_548213316471460_1454671950102399373_n.jpg" alt="bean"></img>
+            <figcaption>♥♥♥♥♥♥♥♥♥♥♥♥♥♥</figcaption>
+        </figure>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+        <div>
+            <img width="400px" height="400px" id="img1" onclick="changImage1()" src="./img/1.jpg" alt="bean"></img>
+        </div>
+        <div>
+            <img width="400px" height="400px" id="img2" onclick="changImage2()" src="./img/44.jpg" alt="bean"></img>
+        </div>
+        <div>
+            <img width="400px" height="400px" id="img3" onclick="changImage3()" src="./img/77.jpg" alt="bean"></img>
+        </div>
+        <div>
+            <img width="400px" height="400px" id="img4" onclick="changImage4()" src="./img/101.jpg" alt="bean"></img>
+        </div>
+    </div>
+    <!-- <div style="margin-top: 100px; margin-bottom: 100px;" id="player">
+        <div id="controls">
+            <div id="progress-bar">
+                <div id="gettime">00:00:00</div>
+                <div id="background-bar"></div>
+                <div id="current-bar"></div>
+                <div id="buffer-bar"></div>
+            </div>
+            <div id="controls-bar">
+                <div id="left-c">
+                    <button onclick='next()' id="switch"><i class="fas fa-pause"></i></button>
+                    <div id="volume-progress-bar">
+                        <div id="volume-bar"></div>
+                    </div>
+                    <p id="time">00:00:00 / 00:00:00</p>
+                </div>
+            </div>
+        </div>
+        <video id="video" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+            ATOZ, pas de vidéo.
+        </video>
+    </div> -->
+
+    <div  style="display: flex; align-items: center; justify-content: space-between;">
+        <div>
+            <video controls>
+                <source src="./img/video-1648671118.mp4">
+            </video>
+        </div>
+        <div>
+            <video controls>
+                <source src="./img/video-1648670479.mp4">
+            </video>
+        </div>
+    </div>
+    
+    <div style="height: 100px; width: 100%;">
+
+    </div>
+    <div id="backtop">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+    <div id="message">
+        <a href="./test.html"><i style="color: white;" class="fa fa-envelope" aria-hidden="true"></i></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#header-plugin").load("https://vivinantony.github.io/header-plugin/", function () {
+            $("a.back-to-link").attr("href", "http://blog.thelittletechie.com/2015/03/love-heart-animation-using-css3.html#tlt")
+        });
+
+        var love = setInterval(function () {
+            var r_num = Math.floor(Math.random() * 40) + 1;
+            var r_size = Math.floor(Math.random() * 65) + 10;
+            var r_left = Math.floor(Math.random() * 100) + 1;
+            var r_bg = Math.floor(Math.random() * 25) + 100;
+            var r_time = Math.floor(Math.random() * 5) + 5;
+
+            $('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
+
+            $('.bg_heart').append("<div class='heart' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) + ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) + "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) + "s ease'></div>");
+
+            $('.heart').each(function () {
+                var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+                var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+                if (top <= -100 || width >= 150) {
+                    $(this).detach();
+                }
+            });
+        }, 500);
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $('#backtop').fadeIn();
+                } else {
+                    $('#backtop').fadeOut();
+                }
+            });
+            $('#backtop').click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
+            })
+        })
+
+        function checkLogin() {
+            if (window.localStorage.length == 0) {
+                window.location = './login.html';
+            }
+        }
+
+        var index = 0;
+        function changeImage1() {
+            var images = ["1.jpg", "33.jpg", "22.jpg"];
+            document.getElementById('img1').src = './img/' + images[index];
+            index++;
+            if (index == 3) {
+                index = 0;
+            }
+        }
+        var index2 = 0;
+        function changeImage2() {
+            var images = ["44.jpg", "66.jpg", "55.jpg"];
+            document.getElementById('img2').src = './img/' + images[index2];
+            index2++;
+            if (index2 == 3) {
+                index2 = 0;
+            }
+        }
+        var i = 0;
+        function changeImage3() {
+            var images = ["77.jpg", "88.jpg", "99.jpg", "110.jpg"];
+            console.log(document.querySelector('#img3').src = './img/' + images[i]);
+            i++;
+            if (i == 4) {
+                i = 0;
+            }
+        }
+        var i2 = 0;
+        function changeImage4() {
+            var images = ["101.jpg", "102.jpg", "103.jpg", "104.jpg", "105.jpg"];
+            console.log(document.querySelector('#img4').src = './img/' + images[i2]);
+            i2++;
+            if (i2 == 5) {
+                i2 = 0;
+            }
+        }
+
+        setInterval(changeImage1, 1000);
+        setInterval(changeImage2, 1000);
+        setInterval(changeImage3, 1000);
+        setInterval(changeImage4, 1000);
+
+        const player = document.getElementById('player'),
+            video = document.getElementById('video'),
+            controls = document.getElementById('controls'),
+            play = document.getElementById('switch'),
+            time = document.getElementById('time'),
+
+            volume_bar = document.getElementById('volume-progress-bar'),
+            volume = document.getElementById('volume-bar'),
+
+            progress_bar = document.getElementById('progress-bar'),
+            current_bar = document.getElementById('current-bar'),
+            buffer_bar = document.getElementById('buffer-bar'),
+
+            gettime = document.getElementById('gettime')
+
+        video.load()
+        setTimeout(() => {
+            next()
+            controls.style.opacity = '0'
+            volume.style.width = `100%`
+        }, 2000)
+
+        function next() {
+            video.paused
+                ? Math.floor(video.currentTime) > Math.floor(video.duration)
+                    ? (video.currentTime = 0, next())
+                    : (video.play(), play.innerHTML = '<i class="fas fa-pause"></i>')
+                : (video.pause(), play.innerHTML = '<i class="fas fa-play"></i>')
+        }
+
+        video.ontimeupdate = () => {
+            buffered()
+            current_bar.style.width = `${(video.currentTime / video.duration) * 97.5}%`
+            time.innerHTML = `${hhmmss(Math.floor(video.currentTime))} / ${hhmmss(Math.floor(video.duration))}`
+        }
+
+        progress_bar.addEventListener('click', (e) => {
+            video.paused
+                ? (video.currentTime = (e.offsetX / progress_bar.clientWidth) * video.duration, current_bar.style.width = `${(e.offsetX / progress_bar.clientWidth) * 97.5}%`, time.innerHTML = `${hhmmss(Math.floor(video.currentTime))} / ${hhmmss(Math.floor(video.duration))}`, setTimeout(() => { next() }, 300), buffered())
+                : (next(), video.currentTime = (e.offsetX / progress_bar.clientWidth) * video.duration, current_bar.style.width = `${(e.offsetX / progress_bar.clientWidth) * 97.5}%`, time.innerHTML = `${hhmmss(Math.floor(video.currentTime))} / ${hhmmss(Math.floor(video.duration))}`, setTimeout(() => { next() }, 300), buffered())
+        })
+
+        progress_bar.onmousemove = (e) => {
+            let pbX = progress_bar.clientWidth
+            let gtX = gettime.clientWidth
+            let elX = e.offsetX
+            gettime.innerHTML = hhmmss(Math.floor((elX / pbX) * video.duration) < 0 ? 0 : Math.floor((elX / pbX) * video.duration))
+            gettime.style.left = elX > gtX
+                ? elX < pbX - gtX
+                    ? `${elX}px`
+                    : `${pbX - ((gtX / 2) + 10)}px`
+                : `${(gtX / 2)}px`
+        }
+
+        volume_bar.addEventListener('click', (e) => {
+            video.volume = (e.offsetX / volume_bar.clientWidth) * 1
+            volume.style.width = `${(e.offsetX / volume_bar.clientWidth) * 100}%`
+        })
+
+        controls.onmouseover = () => {
+            controls.style.opacity = '1'
+        }
+
+        controls.onmouseout = () => {
+            controls.style.opacity = '0'
+        }
+
+        progress_bar.onmouseover = () => {
+            gettime.style.opacity = '1'
+        }
+
+        progress_bar.onmouseout = () => {
+            gettime.style.opacity = '0'
+        }
+
+        player.onmousemove = () => { }
+
+        function hhmmss(seconds) {
+            let minutes = Math.floor(seconds / 60)
+            seconds %= 60
+            let hours = Math.floor(minutes / 60)
+            return (minutes %= 60, 3600 <= video.duration) ? `${pad(hours)}:${pad(minutes)}:${pad(seconds)}` : 3600 > video.duration ? `${pad(minutes)}:${pad(seconds)}` : void 0
+        }
+
+        function pad(a) { return ("0" + a).slice(-2) }
+
+        function buffered() {
+            for (let index = 0; index < video.buffered.length; index++)
+                video.buffered.start(video.buffered.length - 1 - index) < video.currentTime
+                    ? buffer_bar.style.width = `${(video.buffered.end(video.buffered.length - 1 - index) / video.duration) * 97.5}%`
+                    : false
+        }
+
+        function px2percent(pixels, elementX) {
+            const screen = elementX ? elementX : window.screen.width
+            return 100 - (((screen - pixels) / screen) * 100)
+        }
+    </script>
+</body>
+
+</html>
